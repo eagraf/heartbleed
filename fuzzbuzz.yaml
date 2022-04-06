@@ -1,0 +1,5 @@
+openssl-1.0.1f:
+  language: c
+  steps:
+  - run: ./config
+  - run: make
