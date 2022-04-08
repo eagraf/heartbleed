@@ -16,8 +16,8 @@ SSL_CTX *Init() {
     /* These two file were created with this command:
     openssl req -x509 -newkey rsa:512 -keyout server.key     -out server.pem -days 9999 -nodes -subj /CN=a/
     */
-    assert(SSL_CTX_use_certificate_file(sctx, "runtime/server.pem", SSL_FILETYPE_PEM));
-    assert(SSL_CTX_use_PrivateKey_file(sctx, "runtime/server.key", SSL_FILETYPE_PEM));
+    assert(SSL_CTX_use_certificate_file(sctx, "server.pem", SSL_FILETYPE_PEM));
+    assert(SSL_CTX_use_PrivateKey_file(sctx, "server.key", SSL_FILETYPE_PEM));
     return sctx;
 }
 
